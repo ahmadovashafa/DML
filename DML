@@ -1,0 +1,18 @@
+create table customers1(
+customers_id number,
+name varchar2(30),
+surname varchar2 (30),
+phone number,
+birthday date,
+address varchar2(30),
+fincode varchar2(30));
+
+
+insert into customers1 values (1,'Anar','Babayev',+994552366554,'11-May-1995','Azadaliq prospekti','123abc');
+insert into customers1 values (2,'Gunay','Akifova',+994559687896,'21-June-1996','Metbuat prospekti','127ab8');
+insert into customers1 values (3,'Shafa','Ahmadova',+994559552777,'11-May-1998','Eliaga Vahid Kuc 286','156ab7');
+
+
+update customers1 set surname ='Abbaszade' where customers_id=1;
+
+delete from customers1 where address='Metbuat prospekti';
