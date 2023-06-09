@@ -16,3 +16,44 @@ insert into customers1 values (3,'Shafa','Ahmadova',+994559552777,'11-May-1998',
 update customers1 set surname ='Abbaszade' where customers_id=1;
 
 delete from customers1 where address='Metbuat prospekti';
+
+
+--DDL
+
+create table customers1(
+customers_id number,
+name varchar2(30),
+surname varchar2 (30),
+phone number,
+birthday date,
+address varchar2(30),
+fincode varchar2(30));
+
+alter table customers1 drop column birthday; --alter
+
+create table person(--pk
+person_id number primary key,
+name varchar2(30),
+phone number not null);
+
+create table abc( --fk
+abc_id number,
+person_id number);
+
+drop  table customers1;
+
+--select
+
+select *from sales_data;
+
+
+select sale_id, customer_name,customer_email from sales_data;
+select* from sales_data where customer_city='Budapest';
+select * from sales_data order by customer_id desc;
+
+select count(*), customer_city from sales_data group by customer_city;
+
+select sale_id,customer_name
+    from sales_data
+    order by customer_id desc
+    fetch first 10 rows only;
